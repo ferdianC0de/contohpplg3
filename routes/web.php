@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return "Ini halaman Home";
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
